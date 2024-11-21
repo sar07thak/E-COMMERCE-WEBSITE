@@ -141,8 +141,10 @@ section {
     display:-ms-flexbox ;
     display: flex;
     -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     border-radius: 0 0 2rem 2rem;
 }
@@ -164,7 +166,9 @@ section {
     overflow: hidden;
     display: -webkit-box;
     display: -ms-flexbox;
+    display: flex;
     background: #fae8e4;
+    -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
     border: .1rem solid #caab9f;
@@ -184,14 +188,14 @@ section {
     color: #5e473e;
 }
 
-.header.search-form label{
+.header .search-form label{
     font-size: 2.2rem;
     padding-right: 1.7rem;
     cursor: pointer;
     color: #5e473e;
 }
 
-.header.search-form label:hover{
+.header .search-form label:hover{
     color: #9e7464;
 }
 
@@ -218,11 +222,11 @@ section {
         transform: rotate(360deg);
         opacity: 0;
     }
-    100% {
+    /* 100% {
         -webkit-transform: rotate(0deg);
         transform: rotate(0deg);
         opacity: 1;
-    }
+    } */
 }
 
 /* Standard Keyframes */
@@ -232,24 +236,24 @@ section {
         transform: rotate(360deg);
         opacity: 0;
     }
-    100% {
+    /* 100% {
         -webkit-transform: rotate(0deg);
         transform: rotate(0deg);
         opacity: 1;
-    }
+    } */
 }
 
 #closer{
     position: fixed;
-    top: 5rem;
-    right: 4rem;
-    font-size: 5rem;
+    top: 11rem;
+    right: 6rem;
+    font-size: 4rem;
     cursor: pointer;
-    z-index: 10000;
+    z-index: 100000;
     color: #5e473e;
-    -webkit-animation: rotate 0.4s liner .4s backwards ;
-    animation: rotate .4s linear .4s backwards;
-    /* display: none; */
+    -webkit-animation: rotate 0.5s liner 0.5s backwards ;
+    animation: rotate 0.5s linear 0.5s backwards;
+    display: none;
 }
 
 #closer:hover {
@@ -261,11 +265,14 @@ section {
 /* navbar start */
 
 .navbar{
+    /* border: 1px solid black; */
+    transition-duration: .5s;
     position: fixed;
     top: 1.5%;
     bottom: 1.5%;
-    /* right: -101%; */
-    right: 0;
+    right: -101%;
+    /* right: 0; */
+    z-index: 10000;
     width: 35rem;
     /* height: 100vh; */
     background: #fae8e4;

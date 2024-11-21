@@ -9,7 +9,8 @@ closer.onclick = () => {
 
 let navbar = document.querySelector('.navbar');
 
-document,querySelector('#menu-btn').onclick = () =>{
+document.querySelector('#menu-btn').onclick = () =>{
     closer.style.display = "block" ;
-    navbar.classList.toggle('active')
+    navbar.classList.toggle('active');
+    
 }
