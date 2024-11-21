@@ -245,8 +245,8 @@ section {
 
 #closer{
     position: fixed;
-    top: 11rem;
-    right: 6rem;
+    top: 6rem;
+    right: 5rem;
     font-size: 4rem;
     cursor: pointer;
     z-index: 100000;
@@ -315,11 +315,206 @@ color: #945f51;
 
 
 /* shopping cart start */
+.shopping-cart{
+    transition-duration: .5s;
+    position: fixed;
+    top: 1.5%;
+    bottom: 1.5%;
+    right: -101%;
+    /* right: 0; */
+    z-index: 10000;
+    width: 35rem;
+    /* height: 100vh; */
+    background: #fae8e4;
+    padding: 2rem;
+    padding-top: 8rem;
+    overflow-y: scroll;
+    margin: 2%;
+    border-radius: 3rem;  
+}
 
+.shopping-cart.active{
+    right: 0;
+    -webkit-box-shadow : 0 0 0 100vw rgba(0,0,0,0.5);
+    box-shadow:0 0 0 100vw rgba(0,0,0,0.5) ;
+    -webkit-transition: .4s linear;
+    transition: .4s linear;
+}
+
+.shopping-cart::-webkit-scrollbar{
+    width: 0;
+}
+
+.shopping-cart::-webkit-scrollbar-track{
+    background: #eae0dc;
+}
+.shopping-cart::-webkit-scrollbar-thumb{
+    background: #b58d7e;
+}
+.shopping-cart .box{ 
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    align-items: center;
+    gap: 1.5rem;
+    position: relative;
+    margin-bottom: 1rem;
+    padding: .75rem;
+    background-color: #faf7f6;
+    border-radius: 1rem;
+}
+
+.shopping-cart .box .close-icon {
+    top: 50%;
+    right: 1rem;
+    -webkit-transform : translateY(-50%);
+    transform: translateY(-50%);
+    position: absolute;
+    font-size: 2rem;
+    color: #5e473e;
+    cursor: pointer;
+}
+
+.shopping-cart .box .close-icon:hover {
+    color: #9e7464;
+}
+
+.shopping-cart .box img{
+    border-radius: .65rem;
+    height: 8rem;
+}
+
+.shopping-cart .box .content h3{
+    color: #5e473e;
+    font-size: 1.8rem;
+    padding-bottom: .5rem;
+}
+
+.shopping-cart .box .content span{
+    font-size: 1.5rem;
+    color: #b58d7e;
+
+}
+
+.shopping-cart .box .content span.mutiply{
+margin: 0 1rem;
+}
+
+.shopping-cart .total {
+    text-align: center;
+    font-size: 2rem;
+    padding: 1rem 0;
+    color: #845f51;
+}
+
+.shopping-cart .total span{
+    color: #5e473e ;
+}
+
+.shopping-cart .btn{
+    width: 100%;
+    text-align: center ;
+}
 /* shopping cart end */
 
 
 /* login form start */
+.login-form{
+    transition-duration: .5s;
+    position: fixed;
+    top: 1.5%;
+    bottom: 1.5%;
+    right: -101%;
+    z-index: 10000;
+    width: 35rem;
+    background: #fae8e4;
+    padding: 2rem;
+    padding-top: 8rem;
+    overflow-y: scroll;
+    margin: 2%;
+    border-radius: 3rem; 
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center ;
+    -ms-flex-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.login-form.active{
+    right: 0;
+    -webkit-box-shadow : 0 0 0 100vw rgba(0,0,0,0.5);
+    box-shadow:0 0 0 100vw rgba(0,0,0,0.5) ;
+    -webkit-transition: .4s linear;
+    transition: .4s linear;
+}
+.login-form form {
+    padding: 1.7rem;
+    border: 0.1rem solid #caab9f;
+    border-radius: 2rem;   
+}
+.login-form form h3 {
+   font-size: 2.2rem;
+   padding-bottom: 1rem;
+   color: #5e473e;
+}
+
+.login-form form .box {
+    width: 100%;
+    text-transform: none;
+    font-size: 1.5rem;
+    color: #5e473e;
+    padding: 1rem 1.21rem ;
+    border: .1rem solid #caab9f;
+    margin: .7rem 0;
+    border-radius: .75rem;
+    background: transparent;
+}
+
+.login-form form .box::placeholder {
+    color: #845f51;
+}
+.login-form form .remember{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    gap: .5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-form form .remember .remember-me {
+    /* font-size: 1.3rem; */
+    cursor: pointer;
+    color: #b58d7e;
+    padding: 1rem 0;
+    font-size: 1.5rem;
+}
+.login-form form .btn{
+    width: 100%;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.login-form form p {
+    padding-top: 1rem;
+    font-size: 1.4rem;
+    color: #b58d7e;
+}
+.login-form form p a {
+    color: #5e473e;
+}
+
+
+.login-form form p a:hover{
+    text-decoration: underline;
+}  
+ 
+
+
 
 /* login form end */
 
@@ -365,7 +560,67 @@ color: #945f51;
 
 
 /* footer start */
+.footer{
+    margin: 2%;
+    border-radius: 3rem;
+    background: #fae8e4;
+}
 
+.footer .box-container{
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-column: (minmax(25rem , 1fr ))[auto-fit];
+    grid-template-columns: repeat(auto-fit,minmax(25rem,1fr));
+}
+
+.footer .box-container .box h3{
+    font-size: 2.2rem;
+    color: #5e473e;
+    padding: 1rem 0;
+}
+
+.footer .box-container .box p{
+font-size: 1.6rem;
+color: #b58d7e;
+padding: 1rem;
+}
+
+.footer .box-container .box a{
+    font-size: 1.4rem;
+    color: #5e473e;
+    padding: 1rem 0;
+    display: block;
+    display: flex;
+    align-items: center;
+}
+.footer .box-container .box a:hover{
+    color: #9e7464;
+}
+.footer .box-container .box a:hover i{
+    padding-right: 2rem;
+}
+
+.footer .box-container .box a i{
+    padding-right:0.5rem ;
+    color: #5e473e;
+    font-size: 1.7rem;
+
+}
+
+.footer .box-container .box form input[type="email"]{
+    width: 100%;
+    padding: 1rem 1.2rem;
+    font-size: 1.6rem;
+    color: #5e473e;
+    border: .1rem solid #5e473e ;
+    text-transform: none;
+    margin: .7rem 0;
+    background: transparent;
+    border-radius: .75rem;
+}
+.footer .box-container .box form input[type="email"]::placeholder {
+  color: #5e473e;  
+}
 /* footer end */
 
 
