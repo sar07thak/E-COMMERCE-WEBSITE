@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,52 +6,182 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>blog</title>
+    <title>Home</title>
 
     <!-- remix icon cdn link  -->
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.css" integrity="sha512-6p+GTq7fjTHD/sdFPWHaFoALKeWOU9f9MPBoPnvJEWBkGS4PKVVbCpMps6IXnTiXghFbxlgDE8QRHc3MU91lJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- font awesome cdn link  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css" integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- custom css file link  -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="styles.css">
 
 </head>
 
 <body>
 
     <!-- header section starts  -->
+     <header class="header">
+        <a href="home.html" class="logo"><i class="ri-store-2-line"></i>FurnishMe</a>
 
+        <form action="#" class="search-form">
+            <input type="search" placeholder="search-here....." id="search-box">
+            <label for="search-box" class="ri-search-line"></label>
+        </form>
+
+        <div class="icons">
+            <div id="menu-btn" class="ri-menu-line"></div>
+            <div id="cart-btn" class="ri-shopping-cart-line"></div>
+            <div id="login-btn" class="ri-user-line"></div>
+        </div>
+
+     </header>
     <!-- header section ends  -->
 
-
+ 
     <!-- closer btn  -->
-
+     <div id="closer" class="ri-close-line"></div>
 
     <!-- navbar start  -->
 
+    <nav class="navbar">
+        <a href="home.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="about.html">About</a>
+        <a href="team.html">Team</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+    </nav>
     <!-- navbar end  -->
 
 
     <!-- shopping cart start  -->
+     <div class="shopping-cart">
 
+        <div class="box">
+            <i class="ri-close-line close-icon"></i>
+            <img src="../image/cart-img-1.jpg" alt="">
+            <div class="content">
+                <h3>modern furniture</h3>
+                <span class="quantity"> 1 </span>
+                <span class="multiply"> x </span>
+                <span class="price"> $140.00 </span>
+            </div>
+        </div>
+
+        <div class="box">
+            <i class="ri-close-line close-icon"></i>
+            <img src="../image/cart-img-2.jpg" alt="">
+            <div class="content">
+                <h3>modern furniture</h3>
+                <span class="quantity"> 1 </span>
+                <span class="multiply"> x </span>
+                <span class="price"> $140.00 </span>
+            </div>
+        </div>
+
+        <div class="box">
+            <i class="ri-close-line close-icon"></i>
+            <img src="../image/cart-img-3.jpg" alt="">
+            <div class="content">
+                <h3>modern furniture</h3>
+                <span class="quantity"> 1 </span>
+                <span class="multiply"> x </span>
+                <span class="price"> $140.00 </span>
+            </div>
+        </div>
+
+        <div class="box">
+
+            <i class="ri-close-line close-icon"></i>
+            <img src="../image/cart-img-4.jpg" alt="">
+            <div class="content">
+                <h3>modern furniture</h3>
+                <span class="quantity"> 1 </span>
+                <span class="multiply"> x </span>
+                <span class="price"> $140.00 </span>
+            </div>
+        </div>
+
+        <h3 class="total"> total : <span>$560.00 </span></h3>
+        <a href="#" class="btn">Checkout Cart</a>
+        
+     </div>
     <!-- shopping cart end  -->
 
 
     <!-- login form start  -->
-
+     <div class="login-form">
+        <form action="#">
+            <h3>login form</h3>
+            <input type="email" placeholder="Enter your email...." class="box">
+            <input type="password" placeholder="Enter your password...." class="box">
+            <div class="remember">
+                <p class="remember-me">remember me  <input type="checkbox"></p>
+                <input type="submit" value="login-now" class="btn">
+                <p>forget password? <a href="#">click here</a></p>
+                <p>don't have an account? <a href="#">Create now</a></p>
+            </div>
+        </form>
+     </div>
     <!-- login form end  -->
 
 
-    <!-- heading section start -->
+    <!-- home section starts  -->
+     <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="home.html"><i class="ri-arrow-right-line"></i>Home</a>
+                <a href="shop.html"><i class="ri-arrow-right-line"></i>Shop</a>
+                <a href="about.html"><i class="ri-arrow-right-line"></i>About</a>
+                <a href="team.html"><i class="ri-arrow-right-line"></i>Team</a>
+                <a href="blog.html"><i class="ri-arrow-right-line"></i>Blog</a>
+                <a href="contact.html"><i class="ri-arrow-right-line"></i>Contact</a>
+            </div>
 
-    <!-- heading section end -->
+            <div class="box">
+                <h3>extra links</h3>
+                <a href="#"><i class="ri-facebook-line"></i>facebook</a>
+                <a href="#"><i class="ri-twitter-line"></i>twitter</a>
+                <a href="#"><i class="ri-instagram-line"></i>instagram</a>
+                <a href="#"><i class="ri-linkedin-box-line"></i>linkedin</a>
+                <a href="#"><i class="ri-pinterest-line"></i>pinterest</a>
+                <!-- <a href="#"><i class="ri-arrow-right-line"></i>Contact</a> -->
+            </div>
+
+            <div class="box">
+                <h3>extra links</h3>
+                <a href="#"><i class="ri-arrow-right-line"></i>my order</a>
+                <a href="#"><i class="ri-arrow-right-line"></i>my wishlist</a>
+                <a href="#"><i class="ri-arrow-right-line"></i>my account</a>
+                <a href="#"><i class="ri-arrow-right-line"></i>my favourite</a>
+                <a href="#"><i class="ri-arrow-right-line"></i>Terms of user</a>
+                <!-- <a href="#"><i class="ri-arrow-right-line"></i>Contact</a> -->
+            </div>
+
+            <div class="box">
+                <h3>newsletter</h3>
+                <p>subscription for latest updates</p>
+                <form action="#">
+                    <input type="email" name="" placeholder="Enter your email" id="">
+                    <input type="submit" value="subscribe" class="btn">
+                </form>
+            </div>
+        </div>
+     </section>
+
+     <section class="credit">
+        Created by Cyborg | All right reserved
+     </section>
+    <!-- home section ends -->
 
 
-    <!-- blog section start -->
+    <!-- banner section starts  -->
 
-    <!-- blog section end -->
+    <!-- banner section ends -->
+
 
 
 
@@ -61,8 +192,9 @@
 
     <!-- footer section end  -->
 
+
     <!-- custom js file link  -->
-    <script src="js/script.js"></script>
+    <script src="script.js"></script>
 
 </body>
 
