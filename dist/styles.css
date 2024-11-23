@@ -648,6 +648,42 @@ margin: 0 1rem;
 }
 
     /* ---- banner section ---- */
+.banner-container{
+   display: -ms-grid;
+   display: grid;
+   -ms-grid-column: (minmax(30rem,1fr))[auto-fit] ; 
+   grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+   gap: 1.5rem;
+}
+
+.banner-container .banner{
+    height: 25rem;
+    overflow: hidden;
+    position: relative;
+    border-radius: 3rem;
+}
+.banner-container .banner:hover img{
+    -webkit-transform: scale(1.2);
+    transform:scale(1.2);
+}
+
+.banner-container .banner .content{
+    position: absolute;
+    top: 50%;
+    left: 2rem;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.banner-container .banner .content span{
+    font-size: 1.7rem;
+    color: #b58d7e;
+}
+
+.banner-container .banner .content .btn{
+    padding: .7rem 2.5rem;
+}
+
 
 /* home page end */
 
