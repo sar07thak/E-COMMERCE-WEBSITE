@@ -6,7 +6,7 @@ closer.onclick = () => {
     cart.classList.remove('active');
     loginForm.classList.remove('active');
 }
-
+  
 let navbar = document.querySelector('.navbar');
 
 document.querySelector('#menu-btn').onclick = () =>{
@@ -32,11 +32,14 @@ document.getElementById('login-btn').onclick = () => {
 
 let seacrhForm = document.querySelector('.header .search-form');
  
-// document.querySelector('#search-btn').onclick=()=>{
-
-//     seacrhForm.classList.toggle('active');
-// }
-
+// const searcg_btn =document.querySelector('#search-btn').onclick=()=>{
+    
+    // }
+    
+    const search_btn = document.getElementById('search-btn');
+    search_btn.addEventListener('click',()=>{
+            seacrhForm.classList.toggle('active');    
+    })
 window.onscroll= () => {
     seacrhForm.classList.remove('active');
 }
