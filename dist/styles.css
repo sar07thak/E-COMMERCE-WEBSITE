@@ -521,9 +521,131 @@ margin: 0 1rem;
 
 
 /* login form end */
+@-webkit-keyframes fadeout{
+    0% {
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5);
+        opacity: 0;
+    }
+}
 
+@keyframes fadeout{
+    0% {
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5);
+        opacity: 0;
+    }
+}
 
+@-webkit-keyframes fadeleft{
+    0% {
+        -webkit-transform: translateX(-5rem);
+        transform: translateX(0.5);
+        opacity: 0;
+    }
+}
+
+@keyframes fadeleft{
+    0% {
+        -webkit-transform: translateX(-5rem);
+        transform: translateX(0.5);
+        opacity: 0;
+    }
+}
 /* home page start */
+.home{
+    position: relative;
+    margin: 2%;
+    border-radius: 3rem;
+    background-color: #fae8e4;
+}
+
+.home .slides-container .slide{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    display: none;
+}
+
+.home .slides-container .slide.active{
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+}
+
+.home .slides-container .slide .content {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 40rem;
+    flex: 1 1 40rem;
+    -webkit-animation: fadeleft .4s linear .4s backwards;
+    animation: fadeleft .4s linear .4s backwards;   
+}
+
+.home .slides-container .slide .content  span {
+    font-size: 2.5rem;
+    color: #b58d7e;
+}
+
+.home .slides-container .slide .content h3{
+    font-size: 6rem ;
+    color: #5e473e;
+}
+
+.home .slides-container .slide .content p {
+    font-size: 1.5rem;
+    color: #b58d7e;
+    padding: .5rem 0 ;
+    line-height: 2;
+}
+
+.home .slides-container .slide .image{
+    -webkit-box-flex: 1 ;
+    -ms-flex: 1 1 40rem;
+    flex: 1 1 40rem;
+    padding: 3rem 0;
+}
+
+.home .slides-container .slide .image img {
+    width: 100%;
+    -webkit-animation: fadeout .4s linear ;
+    animation: fadeout .4s linear ;
+}
+
+.home #slide-next
+,.home #slide-prev {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    height: 5rem;
+    width: 5rem;
+    font-size: 3rem;
+    line-height: 5rem;
+    text-align: center;
+    color: #845f51;
+    background: #e1cec7;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.home #slide-next:hover , .home #slide-prev:hover  {
+    background: #845f51;
+    color: #e1cec7;
+}
+
+.home #slide-next {
+    right: 2rem;
+}
+
+.home #slide-prev {
+    left: 2rem;
+}
 
     /* ---- banner section ---- */
 
