@@ -122,14 +122,16 @@
 
 
     <!-- login form start  -->
-     <div class="login-form">
-        <form action="#">
+    <div class="login-form">
+        <form action="#" id="loginForm">
             <h3>login form</h3>
-            <input type="email" placeholder="Enter your email...." class="box">
-            <input type="password" placeholder="Enter your password...." class="box">
+            <input type="email" placeholder="Enter your email...." class="box" id="email-valid">
+            <div id="emailError" style="font-size: 1.2rem; color: #9e7464; font-weight: bold;"></div>
+            <input type="password" placeholder="Enter your password...." class="box" id="password-valid">
+            <div id="passwordError" style="font-size: 1.2rem; color: #9e7464; font-weight: bold;"></div>
             <div class="remember">
                 <p class="remember-me">remember me  <input type="checkbox"></p>
-                <input type="submit" value="login-now" class="btn">
+                <input type="submit" value="login-now" id="loginbtn" class="btn">
                 <p>forget password? <a href="#">click here</a></p>
                 <p>don't have an account? <a href="#">Create now</a></p>
             </div>

@@ -72,3 +72,48 @@ document.querySelector('#slide-next').addEventListener('click', () => {
 document.querySelector('#slide-prev').addEventListener('click', () => {
     showSlide(index - 1); // Move to the previous slide
 });
+
+const form = document.getElementById('loginForm');
+const emailInput = document.getElementById('email-valid');
+const passwordInput = document.getElementById('password-valid');
+const emailError = document.getElementById('emailError');
+const passwordError = document.getElementById('passwordError');
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault(); // Prevent form from submitting
+
+  // Clear previous error messages
+  emailError.textContent = '';
+  passwordError.textContent = '';
+
+  let isValid = true;
+
+  // Email validation
+  const email = emailInput.value.trim();
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!email) {
+    emailError.textContent = 'Email is required.';
+    // alert("email required");
+    isValid = false;
+  } else if (!emailRegex.test(email)) {
+    emailError.textContent = 'Invalid email format.';
+    // alert("Invalid email format.")
+    isValid = false;
+  }
+
+  // Password validation
+  const password = passwordInput.value.trim();
+  if (!password) {
+    passwordError.textContent = 'Password is required.';
+    isValid = false;
+  } else if (password.length < 6) {
+    passwordError.textContent = 'Password must be at least 6 characters.';
+    isValid = false;
+  }
+
+  // If valid, show success message or proceed
+  if (isValid) {
+    alert('Login successful!');
+    // Additional actions like redirecting or server-side submission can be added here
+  }
+});
