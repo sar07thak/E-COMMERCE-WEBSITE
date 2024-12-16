@@ -49,4 +49,4 @@ Contributions are welcome! Feel free to fork the repository and submit a pull re
 
 Here is my responsive e-commerce-website ,
 you can visit us by using this link 
-👉👉 https://sar07thak.github.io/E-COMMERCE-WEBSITE/
+👉👉 https://furnishme.netlify.app/
